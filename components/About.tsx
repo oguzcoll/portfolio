@@ -1,0 +1,109 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+
+const About = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <section id="about" className="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-24 py-20">
+      <div className="max-w-6xl mx-auto" ref={ref}>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 flex items-center gap-4">
+            <span className="text-accent-primary text-2xl font-mono">01.</span>
+            <span>About Me</span>
+            <div className="h-px bg-gray-800 flex-1 ml-4" />
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              <p className="text-gray-400 text-lg leading-relaxed mb-6">
+                I am a results-driven Full Stack Developer focused on building high-performance,
+                maintainable web applications using modern technologies. My expertise covers both
+                dynamic frontend development with <span className="text-accent-primary font-medium">React/Next.js</span> and{" "}
+                <span className="text-accent-primary font-medium">TypeScript</span> (Tailwind CSS),
+                and designing scalable backend services utilizing{" "}
+                <span className="text-accent-primary font-medium">Node.js</span>,{" "}
+                <span className="text-accent-primary font-medium">Express</span>,{" "}
+                <span className="text-accent-primary font-medium">PostgreSQL</span>,{" "}
+                <span className="text-accent-primary font-medium">MongoDB</span>, and{" "}
+                <span className="text-accent-primary font-medium">Prisma</span>.
+              </p>
+
+              <p className="text-gray-400 text-lg leading-relaxed mb-6">
+                Beyond modern frameworks, I also provide professional services in{" "}
+                <span className="text-accent-primary font-medium">WordPress development</span>,
+                specializing in custom feature integration and performance optimization for
+                high-traffic sites.
+              </p>
+
+              <p className="text-gray-400 text-lg leading-relaxed">
+                I leverage <span className="text-accent-primary font-medium">Docker</span>,{" "}
+                <span className="text-accent-primary font-medium">Kubernetes</span>, and{" "}
+                <span className="text-accent-primary font-medium">CI/CD pipelines</span> to
+                streamline deployment and ensure stability, consistently delivering projects
+                on time through effective Agile collaboration.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="relative"
+            >
+              <div className="bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20 rounded-2xl p-8 backdrop-blur-sm border border-gray-800">
+                <h3 className="text-2xl font-bold mb-6 text-white">Quick Facts</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <span className="text-accent-primary text-xl">▹</span>
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-white">45% performance improvement</span> through React optimization
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-accent-primary text-xl">▹</span>
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-white">30% reduction</span> in API response latency
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-accent-primary text-xl">▹</span>
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-white">50+ organic traffic increase</span> with SEO-optimized sites
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-accent-primary text-xl">▹</span>
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-white">95% on-time delivery</span> rate across projects
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-accent-primary text-xl">▹</span>
+                    <p className="text-gray-300">
+                      <span className="font-semibold text-white">Deployment time: hours → 10 minutes</span> with CI/CD
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
