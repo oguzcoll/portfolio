@@ -2,6 +2,8 @@
 
 A modern, professional portfolio website built with Next.js 15, TypeScript, Tailwind CSS, and Framer Motion.
 
+🔗 **Live Site**: [https://portfolio-seven-swart-oktmipjdu3.vercel.app/](https://portfolio-seven-swart-oktmipjdu3.vercel.app/)
+
 ## Features
 
 - **Modern Tech Stack**: Next.js 15 App Router, TypeScript, Tailwind CSS
@@ -73,13 +75,20 @@ To customize this portfolio for your own use:
 
 ## Deployment
 
-### Vercel (Recommended)
+This portfolio is deployed on **Vercel** and automatically updates with every push to the main branch.
+
+**Live URL**: [https://portfolio-seven-swart-oktmipjdu3.vercel.app/](https://portfolio-seven-swart-oktmipjdu3.vercel.app/)
+
+### Deploy Your Own
+
+#### Vercel (Recommended)
 
 1. Push your code to GitHub
 2. Import the repository in [Vercel](https://vercel.com)
 3. Deploy with one click
+4. Automatic deployments on every git push
 
-### Other Platforms
+#### Other Platforms
 
 Build the project:
 ```bash
