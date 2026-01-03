@@ -86,16 +86,26 @@ const Education = () => {
                 </div>
               </div>
 
+              <div className="mt-6 p-4 bg-accent-primary/5 rounded-lg border-l-4 border-accent-primary">
+                <p className="text-gray-300 leading-relaxed">
+                  Completed a rigorous, ABET-accredited Computer Engineering program with a strong{" "}
+                  <span className="text-accent-primary font-semibold">3.50 GPA</span>, demonstrating
+                  consistent academic excellence across advanced coursework in software architecture,
+                  system design, and computational theory. Actively contributed to collaborative projects,
+                  applying theoretical knowledge to practical software development challenges.
+                </p>
+              </div>
+
               <div className="mt-8 p-6 bg-gray-900/50 rounded-lg border border-gray-800">
                 <h4 className="text-lg font-semibold text-white mb-3">Key Focus Areas</h4>
                 <div className="grid sm:grid-cols-2 gap-3">
                   {[
-                    "Software Engineering",
-                    "Data Structures & Algorithms",
-                    "Web Development",
-                    "Database Systems",
-                    "Computer Networks",
-                    "Operating Systems",
+                    "Advanced Software Engineering & Design Patterns",
+                    "Data Structures, Algorithms & Complexity Analysis",
+                    "Full-Stack Web Application Development",
+                    "Database Systems & Query Optimization",
+                    "Computer Networks & Distributed Systems",
+                    "Operating Systems & System Programming",
                   ].map((area, index) => (
                     <motion.div
                       key={area}
